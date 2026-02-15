@@ -119,9 +119,6 @@ Or compile it inside Visual Studio / any C++ IDE.
   * Clear() function
   * Reverse traversal
   * Iterator support
+  ---
 
 ---
-
-
-* Add a **short “About” line** for GitHub
-* Write a **perfect first commit message** 😄
