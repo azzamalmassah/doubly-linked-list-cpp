@@ -51,6 +51,9 @@ int main()
     MyDblLinkedList.DeleteLastNode();
     MyDblLinkedList.PrintList();
 
+    cout << "After Reverse  \n";
+    MyDblLinkedList.Reverse();
+    MyDblLinkedList.PrintList();
 
 
 }
