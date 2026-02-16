@@ -181,5 +181,62 @@ public:
 		cout << "\n";
 
 	}
+
+	int Size()
+	{
+		return _Size;
+	}
+
+	bool IsEmpty()
+	{
+		return (_Size == 0);
+	}
+
+	void Clear()
+	{
+		while (_Size > 0)
+		{
+			DeleteFirstNode();
+		}
+	}
+
+	void Reverse()
+	{
+		Node* Current = head;
+		Node* temp = nullptr;
+
+		while (Current != NULL)
+		{
+			temp = Current->Prev;
+			Current->Prev = Current->Next;
+			Current->Next = temp;
+			Current = Current->Prev;
+		}
+		if (temp != nullptr)
+		{
+			head = temp->Prev;
+		}
+	}
+
+	Node* GetNode(T index) {
+
+		if (index > _Size - 1 || index < 0) {
+			return NULL;
+		}
+
+		Node* Current = head;
+		int Counter = -1;
+
+		while ((Current != NULL) && (Current->Next != NULL))
+		{
+			Counter++;
+			if (Counter == index)
+			{
+				return Current;
+			}
+			Current = Current->Next;
+		}
+		return NULL;
+	}
 };
 
