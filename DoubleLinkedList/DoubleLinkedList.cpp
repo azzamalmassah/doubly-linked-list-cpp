@@ -55,5 +55,12 @@ int main()
     MyDblLinkedList.Reverse();
     MyDblLinkedList.PrintList();
 
+    cout << "\nGet Item of index Zero " << MyDblLinkedList.GetItem(0);
+    MyDblLinkedList.UpdateItem(0, 20);
+    cout << "\nAfter Update Item of index Zero \n";
+    MyDblLinkedList.PrintList();
+    cout << "\ninserting Item 200 After  index 1 \n";
+    MyDblLinkedList.InsertAfter(1, 200);
+    MyDblLinkedList.PrintList();
 
 }
