@@ -181,7 +181,7 @@ public:
 	void PrintList() {
 		Node* Current = head;
 		while (Current != NULL) {
-			cout << Current->value << " <-> ";
+			cout << Current->value << " ";
 			Current = Current->Next;
 		}
 		cout << "\n";
@@ -224,25 +224,51 @@ public:
 		}
 	}
 
-	Node* GetNode(T index) {
+	Node* GetNode(int index) {
 
 		if (index > _Size - 1 || index < 0) {
 			return NULL;
 		}
 
 		Node* Current = head;
-		int Counter = -1;
+		int Counter = 0;
 
 		while ((Current != NULL) && (Current->Next != NULL))
 		{
-			Counter++;
 			if (Counter == index)
 			{
-				return Current;
+				break;
 			}
+			Counter++;
+
 			Current = Current->Next;
 		}
-		return NULL;
+		return Current;
 	}
-	
+
+
+	T GetItem(int Index) {
+		Node* ItemNode = GetNode(Index);
+		if (ItemNode == NULL) {
+			return NULL;
+		}
+		return ItemNode->value;
+	}
+
+	bool UpdateItem(int index, T value) {
+		Node* ItemNode = GetNode(index);
+		if (ItemNode == NULL) {
+			return false;
+		}
+		ItemNode->value = value;
+		return true;
+	}
+	bool InsertAfter(int index, T value) {
+		Node* ItemNode = GetNode(index);
+		if (ItemNode == nullptr) {
+			return false;
+		}
+		InsertAfter(ItemNode, value);
+		return true;
+	}
 };
