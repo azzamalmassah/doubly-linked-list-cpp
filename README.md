@@ -1,5 +1,5 @@
 
-# 📚 C++ Doubly Linked List (Template)
+#  C++ Doubly Linked List (Template)
 
 A simple, clean **template-based Doubly Linked List** implementation in C++.
 This project demonstrates how to build and use a doubly linked list from scratch using pointers and templates.
@@ -13,7 +13,7 @@ Perfect for:
 
 ---
 
-## ✨ Features
+##  Features
 
 * Template-based (works with any data type)
 * Insert at:
@@ -32,7 +32,7 @@ Perfect for:
 
 ---
 
-## 📁 Structure
+##  Structure
 
 ```
 .
@@ -42,7 +42,7 @@ Perfect for:
 
 ---
 
-## 🚀 How to Use
+##  How to Use
 
 Include the header in your project:
 
@@ -86,7 +86,7 @@ int main() {
 
 ---
 
-## 🛠️ Build & Run
+##  Build & Run
 
 Using g++:
 
@@ -99,7 +99,7 @@ Or compile it inside Visual Studio / any C++ IDE.
 
 ---
 
-## 🧠 What You’ll Learn
+##  What You’ll Learn
 
 * How doubly linked lists work internally
 * Pointer manipulation in C++
@@ -109,7 +109,7 @@ Or compile it inside Visual Studio / any C++ IDE.
 
 ---
 
-## 📌 Notes
+##  Notes
 
 * This is an educational implementation (not STL replacement).
 * No smart pointers or advanced memory management used (by design, for learning).
